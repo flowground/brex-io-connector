@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "format": "string",
+            "type": "string"
+        },
+        "dataset": {
+            "required": true,
+            "enum": [
+                "",
+                "mini",
+                "master",
+                "full",
+                "refresh"
+            ],
+            "format": "string",
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "format": "string",
+            "type": "string"
+        },
+        "country": {
+            "required": true,
+            "format": "string",
+            "type": "string"
+        }
+    }
+}

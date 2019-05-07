@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "properties": {
+        "country": {
+            "required": true,
+            "format": "string",
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "companyAddress": {
+                    "description": "company address lines",
+                    "type": "string"
+                },
+                "companyName": {
+                    "description": "Company name",
+                    "type": "string"
+                },
+                "companyNumber": {
+                    "description": "official company number",
+                    "type": "string"
+                },
+                "vatNumber": {
+                    "description": "VAT number to validate",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "vatNumber"
+            ],
+            "type": "object"
+        }
+    }
+}

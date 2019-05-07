@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "country": {
+            "required": true,
+            "format": "string",
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "companyAddress": {
+                    "description": "company address lines",
+                    "type": "string"
+                },
+                "companyName": {
+                    "description": "Company name",
+                    "type": "string"
+                },
+                "nifNumber": {
+                    "description": "NIF number to validate",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "nifNumber"
+            ],
+            "type": "object"
+        }
+    }
+}

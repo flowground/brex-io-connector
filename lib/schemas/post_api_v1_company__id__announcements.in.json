@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "format": "string",
+            "type": "string"
+        },
+        "requestBody": {
+            "example": {
+                "data": true,
+                "data-max-announcements": 10
+            },
+            "properties": {
+                "data": {
+                    "description": "include announcement text and structured data",
+                    "type": "boolean"
+                },
+                "data_max_announcements": {
+                    "description": "maximum amount of announcements that should include text",
+                    "format": "int32",
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

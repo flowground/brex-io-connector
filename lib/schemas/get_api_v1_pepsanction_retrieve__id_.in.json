@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "accept": {
+            "required": false,
+            "default": "application/json",
+            "enum": [
+                "application/json",
+                "application/pdf"
+            ],
+            "format": "string",
+            "type": "string"
+        },
+        "id": {
+            "required": true,
+            "format": "string",
+            "type": "string"
+        }
+    }
+}

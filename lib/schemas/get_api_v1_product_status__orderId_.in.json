@@ -1,0 +1,10 @@
+{
+    "type": "object",
+    "properties": {
+        "orderId": {
+            "required": true,
+            "format": "string",
+            "type": "string"
+        }
+    }
+}

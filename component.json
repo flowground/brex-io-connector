@@ -1,0 +1,462 @@
+{
+    "title": "Brex",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/brex.io/1.0.0/openapi.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.brex.io - Main production server",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "user_key": {
+                "label": "user_key (user_key)",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_api_v1_company_announcement__id_": {
+            "main": "./lib/actions/get_api_v1_company_announcement__id_.js",
+            "title": "Search announcements by id",
+            "description": "Search announcements by id",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v1_company_announcement__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v1_company_deepsearch_name__country___name_": {
+            "main": "./lib/actions/get_api_v1_company_deepsearch_name__country___name_.js",
+            "title": "Deep Search (Search on register) by country and name",
+            "description": "Deep Search (Search on register) by country and name",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v1_company_deepsearch_name__country___name_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v1_company_deepsearch_number__country___number_": {
+            "main": "./lib/actions/get_api_v1_company_deepsearch_number__country___number_.js",
+            "title": "Deep Search (Search on register) by country and register number.",
+            "description": "Deep Search (Search on register) by country and register number.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v1_company_deepsearch_number__country___number_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v1_company_search_name__country___name_": {
+            "main": "./lib/actions/get_api_v1_company_search_name__country___name_.js",
+            "title": "Search by country and name",
+            "description": "Search by country and name",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v1_company_search_name__country___name_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v1_company_search_number__country___number_": {
+            "main": "./lib/actions/get_api_v1_company_search_number__country___number_.js",
+            "title": "Search by country and registration number",
+            "description": "Search by country and registration number",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v1_company_search_number__country___number_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_api_v1_company_search__country_": {
+            "main": "./lib/actions/post_api_v1_company_search__country_.js",
+            "title": "Search by country and mixed parameters. This function requires a country code then a mixture of name, number, url, phone, and vat. 0 or 1 of each parameter can be supplied. These are applied in a progressive filter mechanism in the order they are supplied (when properly implemented). This means it is possible to return empty sets when a later match returns an empty set.",
+            "description": "Search by country and mixed parameters. This function requires a country code then a mixture of name, number, url, phone, and vat. 0 or 1 of each parameter can be supplied. These are applied in a progressive filter mechanism in the order they are supplied (when properly implemented). This means it is possible to return empty sets when a later match returns an empty set.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_api_v1_company_search__country_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v1_company__id__announcements": {
+            "main": "./lib/actions/get_api_v1_company__id__announcements.js",
+            "title": "Search announcements by company id",
+            "description": "Search announcements by company id",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v1_company__id__announcements.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_api_v1_company__id__announcements": {
+            "main": "./lib/actions/post_api_v1_company__id__announcements.js",
+            "title": "Search announcements by company id",
+            "description": "Search announcements by company id",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_api_v1_company__id__announcements.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v1_company__id__super__country_": {
+            "main": "./lib/actions/get_api_v1_company__id__super__country_.js",
+            "title": "Search for company superdata by id from previous call",
+            "description": "Search for company superdata by id from previous call",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v1_company__id__super__country_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v1_company__id___dataset_": {
+            "main": "./lib/actions/get_api_v1_company__id___dataset_.js",
+            "title": "Search for company by id from previous call",
+            "description": "Search for company by id from previous call",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v1_company__id___dataset_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_api_v1_nif_verification_basic_check__country_": {
+            "main": "./lib/actions/post_api_v1_nif_verification_basic_check__country_.js",
+            "title": "Basic verification of given portuguese NIF number against NIF.com. Optional parameters may help to build a better confidence score.",
+            "description": "Basic verification of given portuguese NIF number against NIF.com. Optional parameters may help to build a better confidence score.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_api_v1_nif_verification_basic_check__country_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_api_v1_nif_verification_comprehensive_check__country_": {
+            "main": "./lib/actions/post_api_v1_nif_verification_comprehensive_check__country_.js",
+            "title": "Comprehensive verification of given portuguese NIF number against NIF.com. Optional parameters may help to build a better confidence score.",
+            "description": "Comprehensive verification of given portuguese NIF number against NIF.com. Optional parameters may help to build a better confidence score.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_api_v1_nif_verification_comprehensive_check__country_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_api_v1_pepsanction_order__type___search_": {
+            "main": "./lib/actions/post_api_v1_pepsanction_order__type___search_.js",
+            "title": "Order a new Pep Sanction Check",
+            "description": "Order a new Pep Sanction Check",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_api_v1_pepsanction_order__type___search_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v1_pepsanction_retrieve__id_": {
+            "main": "./lib/actions/get_api_v1_pepsanction_retrieve__id_.js",
+            "title": "Retrieve a delivered Pep Sanction check structured or in pdf",
+            "description": "Retrieve a delivered Pep Sanction check structured or in pdf",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v1_pepsanction_retrieve__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v1_product_availability__sku___subjectId_": {
+            "main": "./lib/actions/get_api_v1_product_availability__sku___subjectId_.js",
+            "title": "Check availabilty and valid options for a particular product for a particular subject",
+            "description": "Check availabilty and valid options for a particular product for a particular subject",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v1_product_availability__sku___subjectId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v1_product_notifier__notifierId_": {
+            "main": "./lib/actions/get_api_v1_product_notifier__notifierId_.js",
+            "title": "Return the current status of an existing notifier",
+            "description": "Return the current status of an existing notifier",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v1_product_notifier__notifierId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_api_v1_product_order__sku___option___subjectId_": {
+            "main": "./lib/actions/post_api_v1_product_order__sku___option___subjectId_.js",
+            "title": "Place an order for a particular product for a particular subject",
+            "description": "Place an order for a particular product for a particular subject",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_api_v1_product_order__sku___option___subjectId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_api_v1_product_order__sku___subjectId_": {
+            "main": "./lib/actions/post_api_v1_product_order__sku___subjectId_.js",
+            "title": "Place an order for a particular product for a particular subject",
+            "description": "Place an order for a particular product for a particular subject",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_api_v1_product_order__sku___subjectId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v1_product_search__subjectId_": {
+            "main": "./lib/actions/get_api_v1_product_search__subjectId_.js",
+            "title": "Search for possible products for a particular subject",
+            "description": "Search for possible products for a particular subject",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v1_product_search__subjectId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v1_product_status__orderId_": {
+            "main": "./lib/actions/get_api_v1_product_status__orderId_.js",
+            "title": "Get the status of an ongoing order",
+            "description": "Get the status of an ongoing order",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v1_product_status__orderId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v1_product__orderId_": {
+            "main": "./lib/actions/get_api_v1_product__orderId_.js",
+            "title": "Retrieves the document associated with a completed order",
+            "description": "Retrieves the document associated with a completed order",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v1_product__orderId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v1_system_countries": {
+            "main": "./lib/actions/get_api_v1_system_countries.js",
+            "title": "Search for possible products for a particular subject",
+            "description": "Search for possible products for a particular subject",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v1_system_countries.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_api_v1_system_pricelist": {
+            "main": "./lib/actions/get_api_v1_system_pricelist.js",
+            "title": "Retrieve pricing rules for your subscription plan",
+            "description": "Retrieve pricing rules for your subscription plan",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_api_v1_system_pricelist.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_api_v1_vat_verification_basic_check__country_": {
+            "main": "./lib/actions/post_api_v1_vat_verification_basic_check__country_.js",
+            "title": "Basic verification of given VAT number against VIES. Optional parameters may help to build a better confidence score.",
+            "description": "Basic verification of given VAT number against VIES. Optional parameters may help to build a better confidence score.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_api_v1_vat_verification_basic_check__country_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_api_v1_vat_verification_comprehensive_check__country_": {
+            "main": "./lib/actions/post_api_v1_vat_verification_comprehensive_check__country_.js",
+            "title": "Extended verification of given VAT number against VIES and register. Optional parameters may help to build a better confidence score.",
+            "description": "Extended verification of given VAT number against VIES and register. Optional parameters may help to build a better confidence score.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_api_v1_vat_verification_comprehensive_check__country_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

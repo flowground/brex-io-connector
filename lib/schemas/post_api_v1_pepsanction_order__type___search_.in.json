@@ -1,0 +1,49 @@
+{
+    "type": "object",
+    "properties": {
+        "type": {
+            "required": true,
+            "enum": [
+                "",
+                "B",
+                "P"
+            ],
+            "format": "string",
+            "type": "string"
+        },
+        "search": {
+            "required": true,
+            "format": "string",
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "Aliases": {
+                    "description": "Optional parameter for declaring alias names when doing a person search (seperated by commas)",
+                    "type": "string"
+                },
+                "DOB": {
+                    "description": "Optional parameter for date of birth name when doing a person search",
+                    "type": "string"
+                },
+                "FamilyName": {
+                    "description": "Optional parameter for last name when doing a person search",
+                    "type": "string"
+                },
+                "Filters": {
+                    "description": "Optional parameter for restricting search when doing a person search (seperated by commas)",
+                    "type": "string"
+                },
+                "GivenName": {
+                    "description": "Optional parameter for first name when doing a person search",
+                    "type": "string"
+                },
+                "MiddleName": {
+                    "description": "Optional parameter for middle name when doing a person search",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

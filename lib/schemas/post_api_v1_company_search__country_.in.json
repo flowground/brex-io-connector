@@ -1,0 +1,39 @@
+{
+    "type": "object",
+    "properties": {
+        "country": {
+            "required": true,
+            "format": "string",
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "address": {
+                    "description": "Company address (or address partial)",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "Company name",
+                    "type": "string"
+                },
+                "number": {
+                    "description": "Company registration number",
+                    "type": "string"
+                },
+                "phone": {
+                    "description": "Company contact phone number",
+                    "type": "string"
+                },
+                "url": {
+                    "description": "Company url",
+                    "type": "string"
+                },
+                "vat": {
+                    "description": "Company VAT number",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

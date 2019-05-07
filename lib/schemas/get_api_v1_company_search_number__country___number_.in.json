@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "country": {
+            "required": true,
+            "format": "string",
+            "type": "string"
+        },
+        "number": {
+            "required": true,
+            "format": "string",
+            "type": "string"
+        },
+        "limit": {
+            "required": false,
+            "format": "int64",
+            "type": "integer"
+        }
+    }
+}

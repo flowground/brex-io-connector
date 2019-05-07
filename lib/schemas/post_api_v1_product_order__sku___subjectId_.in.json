@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "properties": {
+        "sku": {
+            "required": true,
+            "format": "string",
+            "type": "string"
+        },
+        "subjectId": {
+            "required": true,
+            "format": "string",
+            "type": "string"
+        }
+    }
+}
